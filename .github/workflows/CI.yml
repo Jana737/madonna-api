@@ -7,8 +7,20 @@ on:
         branches: [main]
 
 jobs:
-    say-hello:
+    test:
         runs-on: ubuntu-latest
         steps:
-            - name: Say hello
-              run: echo "Hello world"
+            # Pulls the code from GitHub onto the runner
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Use Node 22
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run tests
+              run: npm test
