@@ -22,6 +22,13 @@ const magazines = [
     year: 2026,
     country: 'Turkey',
     coverUrl: ''
+  },
+  {
+    id: 4,
+    title: 'POP',
+    year: 1985,
+    country: 'Norway',
+    coverUrl: ''
   }
 ]
 
