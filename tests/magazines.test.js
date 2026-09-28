@@ -11,6 +11,6 @@ describe('GET /magazines', () => {
   it('responds with 3 magazines', async () => {
     const response = await request(app).get('/magazines')
 
-    expect(response.body.length).toBe(4)
+    expect(response.body.length).toBe(3)
   })
 })
